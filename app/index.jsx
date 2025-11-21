@@ -1,23 +1,29 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { Link } from "expo-router";
 
-import Logo from "../assets/images/bma-logo.png";
+import ThemedView from "../components/ThemedView";
+import ThemedText from "../components/ThemedText";
+import ThemedLogo from "../components/ThemedLogo";
+import Spacer from "../components/Spacer";
 
 const Home = () => {
     return (
-        <View style={styles.container}>
-            <Image source={Logo} style={styles.img} />
+        <ThemedView style={styles.container}>
+            <ThemedLogo />
+            <Spacer />
 
-            <Text style={styles.title}>Battery Monitor App</Text>
+            <ThemedText style={styles.title} title={true}>
+                Battery Monitor App
+            </ThemedText>
 
-            <Text style={{ marginTop: 10, marginBottom: 30 }}>
+            <ThemedText style={{ marginTop: 10, marginBottom: 30 }}>
                 Smart battery monitoring for better power efficiency.
-            </Text>
+            </ThemedText>
 
             <Link href="/about" style={styles.link}>
-                About Page
+                <ThemedText>About Page</ThemedText>
             </Link>
-        </View>
+        </ThemedView>
     );
 };
 
@@ -25,7 +31,6 @@ export default Home;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#e0dfe8",
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
