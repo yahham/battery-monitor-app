@@ -1,13 +1,10 @@
 import { Image, useColorScheme } from "react-native";
 
-import Logo from "../assets/images/bma-logo.png";
-
 const ThemedLogo = () => {
     const colorScheme = useColorScheme();
+    const logo = require("../assets/images/bma-logo.png");
 
-    const logo = colorScheme === "dark" ? Logo : Logo;
-
-    return <Image source={logo} />;
+    return <Image source={logo} style={{ width: 100, height: 100 }} />;
 };
 
 export default ThemedLogo;
