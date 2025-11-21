@@ -1,4 +1,4 @@
-import { StyleSheet, ScrollView } from "react-native";
+import { StyleSheet, ScrollView, View } from "react-native";
 import { Link } from "expo-router";
 
 import ThemedView from "../components/ThemedView";
@@ -10,7 +10,7 @@ import Spacer from "../components/Spacer";
 const Home = () => {
     return (
         <ThemedView style={styles.container}>
-            <ScrollView
+            <ScrollView 
                 contentContainerStyle={styles.scrollContent}
                 showsVerticalScrollIndicator={false}
             >
@@ -27,9 +27,16 @@ const Home = () => {
 
                 <BatteryStatus />
 
-                <Link href="/about" style={styles.link}>
-                    <ThemedText>About Page</ThemedText>
-                </Link>
+                {/* Navigation Links */}
+                <View style={styles.linksContainer}>
+                    <Link href="/battery-details" style={styles.link}>
+                        <ThemedText>📊 View Battery Details</ThemedText>
+                    </Link>
+
+                    <Link href="/about" style={styles.link}>
+                        <ThemedText>ℹ️ About Page</ThemedText>
+                    </Link>
+                </View>
             </ScrollView>
         </ThemedView>
     );
@@ -57,8 +64,13 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         textAlign: "center",
     },
+    linksContainer: {
+        marginTop: 20,
+        gap: 15,
+    },
     link: {
-        marginVertical: 20,
+        marginVertical: 10,
         borderBottomWidth: 1,
+        paddingBottom: 5,
     },
 });
