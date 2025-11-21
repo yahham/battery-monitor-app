@@ -1,4 +1,5 @@
 import { Image, StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
 
 import Logo from "../assets/images/bma-logo.png";
 
@@ -7,11 +8,15 @@ const Home = () => {
         <View style={styles.container}>
             <Image source={Logo} style={styles.img} />
 
-            <Text style={styles.title}>Batter Monitor</Text>
+            <Text style={styles.title}>Battery Monitor App</Text>
 
             <Text style={{ marginTop: 10, marginBottom: 30 }}>
                 Smart battery monitoring for better power efficiency.
             </Text>
+
+            <Link href="/about" style={styles.link}>
+                About Page
+            </Link>
         </View>
     );
 };
@@ -31,5 +36,9 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: "bold",
         fontSize: 18,
+    },
+    link: {
+        marginVertical: 10,
+        borderBottomWidth: 1,
     },
 });
