@@ -105,4 +105,3 @@ Despite different implementation, achieves **identical functionality** to native
     <td align="center">Battery Details</td>
   </tr>
 </table>
-
