@@ -90,3 +90,19 @@ Despite different implementation, achieves **identical functionality** to native
 - Low battery warnings
 - Memory leak prevention
 - Contextual recommendations
+
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="screenshots/home.jpg" alt="home" width="200"/></td>
+    <td><img src="screenshots/home-charging.jpg" alt="home-charging" width="200"/></td>
+    <td><img src="screenshots/battery-details.jpg" alt="battery-details" width="200"/></td>
+  </tr>
+  <tr>
+    <td align="center">Normal Battery</td>
+    <td align="center">Charging</td>
+    <td align="center">Battery Details</td>
+  </tr>
+</table>
+
